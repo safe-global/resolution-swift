@@ -15,17 +15,17 @@
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
         "state": {
           "branch": null,
-          "revision": "3a2acbb32ab68215ee1596ee6004da8e90c3721b",
-          "version": "1.0.0"
+          "revision": "4e31051c63cc0ddf10a25cf5318856c510cf77f4",
+          "version": "1.4.0"
         }
       },
       {
         "package": "EthereumAddress",
-        "repositoryURL": "https://github.com/shamatar/EthereumAddress.git",
+        "repositoryURL": "https://github.com/sche/EthereumAddress.git",
         "state": {
-          "branch": null,
-          "revision": "a8eb4fc1dc03c068bf88585d8f5a2dd3572664ca",
-          "version": "1.3.0"
+          "branch": "update-CryptoSwift-version",
+          "revision": "6726437315d1f50bc24adea258d04ede3d0f73cb",
+          "version": null
         }
       }
     ]

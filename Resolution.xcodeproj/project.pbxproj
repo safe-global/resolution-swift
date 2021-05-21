@@ -29,6 +29,7 @@
 		3EE4DA1224E367720097540B /* ResolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4DA1124E367720097540B /* ResolutionTests.swift */; };
 		3EE4DA1424E367720097540B /* resolution.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EE4DA0624E367720097540B /* resolution.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3EE4DA1E24E367D40097540B /* Resolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4DA1D24E367D40097540B /* Resolution.swift */; };
+		552C8C7226580708006F2BAF /* EthereumAddress in Frameworks */ = {isa = PBXBuildFile; productRef = 552C8C7126580708006F2BAF /* EthereumAddress */; };
 		8402F708250935FE0007F01D /* ContractZNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F707250935FD0007F01D /* ContractZNS.swift */; };
 		8449EDFA25139F2500DABB57 /* ensRegistry.json in Resources */ = {isa = PBXBuildFile; fileRef = 8449EDF925139F2500DABB57 /* ensRegistry.json */; };
 		8449EDFC2513BA3D00DABB57 /* ensResolver.json in Resources */ = {isa = PBXBuildFile; fileRef = 8449EDFB2513BA3D00DABB57 /* ensResolver.json */; };
@@ -48,7 +49,6 @@
 		B6F2075B25DBD89800140CE3 /* ABIParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2075325DBD89800140CE3 /* ABIParsing.swift */; };
 		B6F2076125DBD8C800140CE3 /* EthereumABITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2075F25DBD8C700140CE3 /* EthereumABITests.swift */; };
 		B6F2076D25DBD93900140CE3 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6F2076C25DBD93900140CE3 /* CryptoSwift */; };
-		B6F2077B25DBD99F00140CE3 /* EthereumAddress in Frameworks */ = {isa = PBXBuildFile; productRef = B6F2077A25DBD99F00140CE3 /* EthereumAddress */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +118,7 @@
 			files = (
 				B6B202C8260226B700A72AF2 /* BigInt in Frameworks */,
 				B6F2076D25DBD93900140CE3 /* CryptoSwift in Frameworks */,
-				B6F2077B25DBD99F00140CE3 /* EthereumAddress in Frameworks */,
+				552C8C7226580708006F2BAF /* EthereumAddress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,8 +363,8 @@
 			name = UnstoppableDomainsResolution;
 			packageProductDependencies = (
 				B6F2076C25DBD93900140CE3 /* CryptoSwift */,
-				B6F2077A25DBD99F00140CE3 /* EthereumAddress */,
 				B6B202C7260226B700A72AF2 /* BigInt */,
+				552C8C7126580708006F2BAF /* EthereumAddress */,
 			);
 			productName = resolution;
 			productReference = 3EE4DA0324E367720097540B /* Resolution.framework */;
@@ -418,8 +418,8 @@
 			mainGroup = 3EE4D9F924E367720097540B;
 			packageReferences = (
 				B6F2076B25DBD93900140CE3 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				B6F2077925DBD99F00140CE3 /* XCRemoteSwiftPackageReference "EthereumAddress" */,
 				B6B202C6260226B700A72AF2 /* XCRemoteSwiftPackageReference "BigInt" */,
+				552C8C7026580708006F2BAF /* XCRemoteSwiftPackageReference "EthereumAddress" */,
 			);
 			productRefGroup = 3EE4DA0424E367720097540B /* Products */;
 			projectDirPath = "";
@@ -795,6 +795,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		552C8C7026580708006F2BAF /* XCRemoteSwiftPackageReference "EthereumAddress" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sche/EthereumAddress.git";
+			requirement = {
+				branch = "update-CryptoSwift-version";
+				kind = branch;
+			};
+		};
 		B6B202C6260226B700A72AF2 /* XCRemoteSwiftPackageReference "BigInt" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/attaswift/BigInt.git";
@@ -808,20 +816,17 @@
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		B6F2077925DBD99F00140CE3 /* XCRemoteSwiftPackageReference "EthereumAddress" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/shamatar/EthereumAddress.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.0;
+				minimumVersion = 1.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		552C8C7126580708006F2BAF /* EthereumAddress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 552C8C7026580708006F2BAF /* XCRemoteSwiftPackageReference "EthereumAddress" */;
+			productName = EthereumAddress;
+		};
 		B6B202C7260226B700A72AF2 /* BigInt */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B6B202C6260226B700A72AF2 /* XCRemoteSwiftPackageReference "BigInt" */;
@@ -831,11 +836,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B6F2076B25DBD93900140CE3 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
-		};
-		B6F2077A25DBD99F00140CE3 /* EthereumAddress */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6F2077925DBD99F00140CE3 /* XCRemoteSwiftPackageReference "EthereumAddress" */;
-			productName = EthereumAddress;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

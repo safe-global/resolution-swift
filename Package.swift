@@ -13,9 +13,9 @@ let package = Package(
             targets: ["UnstoppableDomainsResolution"])
     ],
     dependencies: [
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.0.0"),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.4.0"),
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.0.0"),
-        .package(url: "https://github.com/shamatar/EthereumAddress.git", from: "1.3.0")
+        .package(url: "https://github.com/sche/EthereumAddress.git", .branch("update-CryptoSwift-version"))
     ],
     targets: [
         .target(
@@ -35,7 +35,7 @@ let package = Package(
         .testTarget(
             name: "ResolutionTests",
             dependencies: ["UnstoppableDomainsResolution"],
-            exclude:["Info.plist"],
+            exclude: ["Info.plist"],
             swiftSettings: [.define("INSIDE_PM")]
         )
     ]
