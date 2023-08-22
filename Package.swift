@@ -15,7 +15,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.7.2"),
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.0.0"),
-        .package(url: "https://github.com/shamatar/EthereumAddress.git", from: "1.3.0")
         .package(url: "https://github.com/safe-global/EthereumAddress.git", .branch("update-cryptoswift-1.7.2"))
     ],
     targets: [
